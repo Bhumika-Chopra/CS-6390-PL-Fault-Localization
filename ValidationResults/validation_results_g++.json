@@ -1,0 +1,421 @@
+{
+  "total_samples": 50,
+  "passed": 38,
+  "caution": 12,
+  "failed": 0,
+  "caution_samples": [
+    {
+      "sample": "sample_04.cpp",
+      "score": 0.0,
+      "reason": "Equal scores - no differentiation detected"
+    },
+    {
+      "sample": "sample_05.cpp",
+      "score": 0.0,
+      "reason": "Equal scores - no differentiation detected"
+    },
+    {
+      "sample": "sample_12.cpp",
+      "score": 0.0,
+      "reason": "Equal scores - no differentiation detected"
+    },
+    {
+      "sample": "sample_18.cpp",
+      "score": 0.0,
+      "reason": "Equal scores - no differentiation detected"
+    },
+    {
+      "sample": "sample_21.cpp",
+      "score": 0.0,
+      "reason": "Equal scores - no differentiation detected"
+    },
+    {
+      "sample": "sample_22.cpp",
+      "score": 0.0,
+      "reason": "Equal scores - no differentiation detected"
+    },
+    {
+      "sample": "sample_26.cpp",
+      "score": 0.0,
+      "reason": "Equal scores - no differentiation detected"
+    },
+    {
+      "sample": "sample_28.cpp",
+      "score": 0.1,
+      "reason": "Equal scores - no differentiation detected"
+    },
+    {
+      "sample": "sample_31.cpp",
+      "score": 0.0,
+      "reason": "Equal scores - no differentiation detected"
+    },
+    {
+      "sample": "sample_32.cpp",
+      "score": 0.0,
+      "reason": "Equal scores - no differentiation detected"
+    },
+    {
+      "sample": "sample_34.cpp",
+      "score": 0.0,
+      "reason": "Equal scores - no differentiation detected"
+    },
+    {
+      "sample": "sample_38.cpp",
+      "score": 0.0,
+      "reason": "Equal scores - no differentiation detected"
+    }
+  ],
+  "failures": [],
+  "sample_scores": [
+    {
+      "sample": "sample_01.cpp",
+      "normal_score": 0.0,
+      "spaghetti_score": 1.0,
+      "difference": 1.0,
+      "status": "passed"
+    },
+    {
+      "sample": "sample_02.cpp",
+      "normal_score": 0.0,
+      "spaghetti_score": 0.25,
+      "difference": 0.25,
+      "status": "passed"
+    },
+    {
+      "sample": "sample_03.cpp",
+      "normal_score": 0.0,
+      "spaghetti_score": 0.4,
+      "difference": 0.4,
+      "status": "passed"
+    },
+    {
+      "sample": "sample_04.cpp",
+      "normal_score": 0.0,
+      "spaghetti_score": 0.0,
+      "difference": 0.0,
+      "status": "caution"
+    },
+    {
+      "sample": "sample_05.cpp",
+      "normal_score": 0.0,
+      "spaghetti_score": 0.0,
+      "difference": 0.0,
+      "status": "caution"
+    },
+    {
+      "sample": "sample_06.cpp",
+      "normal_score": 0.0,
+      "spaghetti_score": 0.1,
+      "difference": 0.1,
+      "status": "passed"
+    },
+    {
+      "sample": "sample_07.cpp",
+      "normal_score": 0.0,
+      "spaghetti_score": 1.0,
+      "difference": 1.0,
+      "status": "passed"
+    },
+    {
+      "sample": "sample_08.cpp",
+      "normal_score": 0.0,
+      "spaghetti_score": 0.1,
+      "difference": 0.1,
+      "status": "passed"
+    },
+    {
+      "sample": "sample_09.cpp",
+      "normal_score": 0.0,
+      "spaghetti_score": 0.4,
+      "difference": 0.4,
+      "status": "passed"
+    },
+    {
+      "sample": "sample_10.cpp",
+      "normal_score": 0.0,
+      "spaghetti_score": 1.0,
+      "difference": 1.0,
+      "status": "passed"
+    },
+    {
+      "sample": "sample_11.cpp",
+      "normal_score": 0.0,
+      "spaghetti_score": 1.0,
+      "difference": 1.0,
+      "status": "passed"
+    },
+    {
+      "sample": "sample_12.cpp",
+      "normal_score": 0.0,
+      "spaghetti_score": 0.0,
+      "difference": 0.0,
+      "status": "caution"
+    },
+    {
+      "sample": "sample_13.cpp",
+      "normal_score": 0.0,
+      "spaghetti_score": 0.4,
+      "difference": 0.4,
+      "status": "passed"
+    },
+    {
+      "sample": "sample_14.cpp",
+      "normal_score": 0.0,
+      "spaghetti_score": 1.0,
+      "difference": 1.0,
+      "status": "passed"
+    },
+    {
+      "sample": "sample_15.cpp",
+      "normal_score": 0.0,
+      "spaghetti_score": 0.1,
+      "difference": 0.1,
+      "status": "passed"
+    },
+    {
+      "sample": "sample_16.cpp",
+      "normal_score": 0.0,
+      "spaghetti_score": 0.4,
+      "difference": 0.4,
+      "status": "passed"
+    },
+    {
+      "sample": "sample_17.cpp",
+      "normal_score": 0.0,
+      "spaghetti_score": 1.0,
+      "difference": 1.0,
+      "status": "passed"
+    },
+    {
+      "sample": "sample_18.cpp",
+      "normal_score": 0.0,
+      "spaghetti_score": 0.0,
+      "difference": 0.0,
+      "status": "caution"
+    },
+    {
+      "sample": "sample_19.cpp",
+      "normal_score": 0.1,
+      "spaghetti_score": 0.2,
+      "difference": 0.1,
+      "status": "passed"
+    },
+    {
+      "sample": "sample_20.cpp",
+      "normal_score": 0.1,
+      "spaghetti_score": 0.55,
+      "difference": 0.45,
+      "status": "passed"
+    },
+    {
+      "sample": "sample_21.cpp",
+      "normal_score": 0.0,
+      "spaghetti_score": 0.0,
+      "difference": 0.0,
+      "status": "caution"
+    },
+    {
+      "sample": "sample_22.cpp",
+      "normal_score": 0.0,
+      "spaghetti_score": 0.0,
+      "difference": 0.0,
+      "status": "caution"
+    },
+    {
+      "sample": "sample_23.cpp",
+      "normal_score": 0.0,
+      "spaghetti_score": 0.4,
+      "difference": 0.4,
+      "status": "passed"
+    },
+    {
+      "sample": "sample_24.cpp",
+      "normal_score": 0.0,
+      "spaghetti_score": 1.0,
+      "difference": 1.0,
+      "status": "passed"
+    },
+    {
+      "sample": "sample_25.cpp",
+      "normal_score": 0.0,
+      "spaghetti_score": 0.1,
+      "difference": 0.1,
+      "status": "passed"
+    },
+    {
+      "sample": "sample_26.cpp",
+      "normal_score": 0.0,
+      "spaghetti_score": 0.0,
+      "difference": 0.0,
+      "status": "caution"
+    },
+    {
+      "sample": "sample_27.cpp",
+      "normal_score": 0.1,
+      "spaghetti_score": 1.0,
+      "difference": 0.9,
+      "status": "passed"
+    },
+    {
+      "sample": "sample_28.cpp",
+      "normal_score": 0.1,
+      "spaghetti_score": 0.1,
+      "difference": 0.0,
+      "status": "caution"
+    },
+    {
+      "sample": "sample_29.cpp",
+      "normal_score": 0.1,
+      "spaghetti_score": 0.4,
+      "difference": 0.3,
+      "status": "passed"
+    },
+    {
+      "sample": "sample_30.cpp",
+      "normal_score": 0.1,
+      "spaghetti_score": 1.0,
+      "difference": 0.9,
+      "status": "passed"
+    },
+    {
+      "sample": "sample_31.cpp",
+      "normal_score": 0.0,
+      "spaghetti_score": 0.0,
+      "difference": 0.0,
+      "status": "caution"
+    },
+    {
+      "sample": "sample_32.cpp",
+      "normal_score": 0.0,
+      "spaghetti_score": 0.0,
+      "difference": 0.0,
+      "status": "caution"
+    },
+    {
+      "sample": "sample_33.cpp",
+      "normal_score": 0.1,
+      "spaghetti_score": 0.1,
+      "difference": 0.0,
+      "status": "passed"
+    },
+    {
+      "sample": "sample_34.cpp",
+      "normal_score": 0.0,
+      "spaghetti_score": 0.0,
+      "difference": 0.0,
+      "status": "caution"
+    },
+    {
+      "sample": "sample_35.cpp",
+      "normal_score": 0.0,
+      "spaghetti_score": 0.4,
+      "difference": 0.4,
+      "status": "passed"
+    },
+    {
+      "sample": "sample_36.cpp",
+      "normal_score": 0.0,
+      "spaghetti_score": 1.0,
+      "difference": 1.0,
+      "status": "passed"
+    },
+    {
+      "sample": "sample_37.cpp",
+      "normal_score": 0.0,
+      "spaghetti_score": 0.1,
+      "difference": 0.1,
+      "status": "passed"
+    },
+    {
+      "sample": "sample_38.cpp",
+      "normal_score": 0.0,
+      "spaghetti_score": 0.0,
+      "difference": 0.0,
+      "status": "caution"
+    },
+    {
+      "sample": "sample_39.cpp",
+      "normal_score": 0.0,
+      "spaghetti_score": 0.7,
+      "difference": 0.7,
+      "status": "passed"
+    },
+    {
+      "sample": "sample_40.cpp",
+      "normal_score": 0.0,
+      "spaghetti_score": 0.1,
+      "difference": 0.1,
+      "status": "passed"
+    },
+    {
+      "sample": "sample_41.cpp",
+      "normal_score": 0.0,
+      "spaghetti_score": 1.0,
+      "difference": 1.0,
+      "status": "passed"
+    },
+    {
+      "sample": "sample_42.cpp",
+      "normal_score": 0.0,
+      "spaghetti_score": 0.1,
+      "difference": 0.1,
+      "status": "passed"
+    },
+    {
+      "sample": "sample_43.cpp",
+      "normal_score": 0.0,
+      "spaghetti_score": 0.4,
+      "difference": 0.4,
+      "status": "passed"
+    },
+    {
+      "sample": "sample_44.cpp",
+      "normal_score": 0.0,
+      "spaghetti_score": 1.0,
+      "difference": 1.0,
+      "status": "passed"
+    },
+    {
+      "sample": "sample_45.cpp",
+      "normal_score": 0.0,
+      "spaghetti_score": 1.0,
+      "difference": 1.0,
+      "status": "passed"
+    },
+    {
+      "sample": "sample_46.cpp",
+      "normal_score": 0.0,
+      "spaghetti_score": 0.1,
+      "difference": 0.1,
+      "status": "passed"
+    },
+    {
+      "sample": "sample_47.cpp",
+      "normal_score": 0.1,
+      "spaghetti_score": 0.55,
+      "difference": 0.45,
+      "status": "passed"
+    },
+    {
+      "sample": "sample_48.cpp",
+      "normal_score": 0.0,
+      "spaghetti_score": 0.4,
+      "difference": 0.4,
+      "status": "passed"
+    },
+    {
+      "sample": "sample_49.cpp",
+      "normal_score": 0.0,
+      "spaghetti_score": 1.0,
+      "difference": 1.0,
+      "status": "passed"
+    },
+    {
+      "sample": "sample_50.cpp",
+      "normal_score": 0.0,
+      "spaghetti_score": 0.4,
+      "difference": 0.4,
+      "status": "passed"
+    }
+  ]
+}

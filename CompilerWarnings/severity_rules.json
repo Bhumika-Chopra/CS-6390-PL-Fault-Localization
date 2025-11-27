@@ -1,0 +1,62 @@
+{
+  "1": [
+    "use '==' to turn this assignment into an equality comparison",
+    "uninitialized",
+    "use of uninitialized",
+    "null pointer",
+    "null dereference",
+    "out of bounds",
+    "buffer overflow",
+    "use-after-free",
+    "dangling pointer",
+    "stack-use-after-return",
+    "stack overflow",
+    "control may reach end of non-void function",
+    "variable may be uninitialized when used here",
+    "invalid memory access",
+    "undefined behavior",
+    "recursion limit exceeded",
+    "references inner block variable"
+  ],
+  "2": [
+    "comparison between signed",
+    "signed and unsigned",
+    "overflow",
+    "arithmetic overflow",
+    "implicit fallthrough",
+    "division by zero",
+    "reference to local",
+    "returning address of local",
+    "too many arguments",
+    "too few arguments",
+    "old-style cast",
+    "non-virtual destructor",
+    "implicit conversion loses integer precision",
+    "oversized stack frame",
+    "switch missing default",
+    "misleading indentation",
+    "unused-but-set variable",
+    "inlining failed"
+  ],
+  "3": [
+    "unused variable",
+    "unused parameter",
+    "unused function",
+    "control reaches end",
+    "misleading indentation",
+    "shadowed",
+    "shadows",
+    "comparison of integers of different signs",
+    "format specifies type",
+    "logical-op-parentheses",
+    "magic number"
+  ],
+  "4": [
+    "deprecated",
+    "suggest braces",
+    "extra semicolon",
+    "padding",
+    "trailing semicolon",
+    "unreachable code"
+  ]
+}
