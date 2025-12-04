@@ -1,0 +1,3264 @@
+{
+  "dataset_info": {
+    "name": "C++ Spaghetti Code Detection Dataset",
+    "version": "1.0",
+    "total_samples": 320,
+    "normal_samples": 160,
+    "spaghetti_samples": 160,
+    "description": "Dataset containing clean C++ code paired with spaghettified versions using realistic compiler warnings and code quality issues",
+    "severity_levels": {
+      "1": "Critical - uninitialized vars, null deref, assignment as condition, out-of-bounds, use-after-free",
+      "2": "High - signed/unsigned comparison, arithmetic overflow, switch fallthrough, division by zero, return local reference",
+      "3": "Medium - unused vars/functions/params, missing return, misleading indentation, shadowing, infinite loops"
+    }
+  },
+  "metric_definitions": {
+    "level_1_critical": [
+      "uninitialized_variable",
+      "null_pointer_dereference",
+      "assignment_as_condition",
+      "out_of_bounds_array_access",
+      "use_after_free"
+    ],
+    "level_2_high": [
+      "signed_unsigned_comparison",
+      "arithmetic_overflow",
+      "switch_fallthrough",
+      "division_by_zero",
+      "return_local_reference"
+    ],
+    "level_3_medium": [
+      "unused_variable",
+      "unused_function",
+      "unused_parameter",
+      "missing_return",
+      "misleading_indentation",
+      "variable_shadowing",
+      "possible_infinite_loop"
+    ]
+  },
+  "samples": [
+    {
+      "id": 1,
+      "name": "sample_01",
+      "algorithm": "Bubble Sort",
+      "category": "sorting",
+      "file": "dataset/normal/sample_01.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 2,
+      "name": "sample_01_spaghetti",
+      "algorithm": "Bubble Sort",
+      "category": "sorting",
+      "file": "dataset/spaghetti/sample_01.cpp",
+      "is_spaghetti": true,
+      "severity_level": 1,
+      "metrics": [
+        "uninitialized_variable",
+        "assignment_as_condition"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "sample_02",
+      "algorithm": "Selection Sort",
+      "category": "sorting",
+      "file": "dataset/normal/sample_02.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 4,
+      "name": "sample_02_spaghetti",
+      "algorithm": "Selection Sort",
+      "category": "sorting",
+      "file": "dataset/spaghetti/sample_02.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "signed_unsigned_comparison",
+        "arithmetic_overflow"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "sample_03",
+      "algorithm": "Insertion Sort",
+      "category": "sorting",
+      "file": "dataset/normal/sample_03.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 6,
+      "name": "sample_03_spaghetti",
+      "algorithm": "Insertion Sort",
+      "category": "sorting",
+      "file": "dataset/spaghetti/sample_03.cpp",
+      "is_spaghetti": true,
+      "severity_level": 3,
+      "metrics": [
+        "unused_variable",
+        "variable_shadowing"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "sample_04",
+      "algorithm": "Merge Sort",
+      "category": "sorting",
+      "file": "dataset/normal/sample_04.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 8,
+      "name": "sample_04_spaghetti",
+      "algorithm": "Merge Sort",
+      "category": "sorting",
+      "file": "dataset/spaghetti/sample_04.cpp",
+      "is_spaghetti": true,
+      "severity_level": 1,
+      "metrics": [
+        "out_of_bounds_array_access"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "sample_05",
+      "algorithm": "Quick Sort",
+      "category": "sorting",
+      "file": "dataset/normal/sample_05.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 10,
+      "name": "sample_05_spaghetti",
+      "algorithm": "Quick Sort",
+      "category": "sorting",
+      "file": "dataset/spaghetti/sample_05.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "signed_unsigned_comparison"
+      ]
+    },
+    {
+      "id": 11,
+      "name": "sample_06",
+      "algorithm": "Linear Search",
+      "category": "searching",
+      "file": "dataset/normal/sample_06.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 12,
+      "name": "sample_06_spaghetti",
+      "algorithm": "Linear Search",
+      "category": "searching",
+      "file": "dataset/spaghetti/sample_06.cpp",
+      "is_spaghetti": true,
+      "severity_level": 3,
+      "metrics": [
+        "missing_return",
+        "misleading_indentation"
+      ]
+    },
+    {
+      "id": 13,
+      "name": "sample_07",
+      "algorithm": "Binary Search",
+      "category": "searching",
+      "file": "dataset/normal/sample_07.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 14,
+      "name": "sample_07_spaghetti",
+      "algorithm": "Binary Search",
+      "category": "searching",
+      "file": "dataset/spaghetti/sample_07.cpp",
+      "is_spaghetti": true,
+      "severity_level": 1,
+      "metrics": [
+        "uninitialized_variable",
+        "assignment_as_condition"
+      ]
+    },
+    {
+      "id": 15,
+      "name": "sample_08",
+      "algorithm": "Find Duplicates",
+      "category": "searching",
+      "file": "dataset/normal/sample_08.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 16,
+      "name": "sample_08_spaghetti",
+      "algorithm": "Find Duplicates",
+      "category": "searching",
+      "file": "dataset/spaghetti/sample_08.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "division_by_zero",
+        "signed_unsigned_comparison"
+      ]
+    },
+    {
+      "id": 17,
+      "name": "sample_09",
+      "algorithm": "Find Peak Element",
+      "category": "searching",
+      "file": "dataset/normal/sample_09.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 18,
+      "name": "sample_09_spaghetti",
+      "algorithm": "Find Peak Element",
+      "category": "searching",
+      "file": "dataset/spaghetti/sample_09.cpp",
+      "is_spaghetti": true,
+      "severity_level": 3,
+      "metrics": [
+        "unused_function",
+        "unused_variable",
+        "unused_parameter",
+        "possible_infinite_loop"
+      ]
+    },
+    {
+      "id": 19,
+      "name": "sample_10",
+      "algorithm": "Count Occurrences",
+      "category": "searching",
+      "file": "dataset/normal/sample_10.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 20,
+      "name": "sample_10_spaghetti",
+      "algorithm": "Count Occurrences",
+      "category": "searching",
+      "file": "dataset/spaghetti/sample_10.cpp",
+      "is_spaghetti": true,
+      "severity_level": 1,
+      "metrics": [
+        "uninitialized_variable",
+        "null_pointer_dereference",
+        "assignment_as_condition"
+      ]
+    },
+    {
+      "id": 21,
+      "name": "sample_11",
+      "algorithm": "Prime Check",
+      "category": "number_theory",
+      "file": "dataset/normal/sample_11.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 22,
+      "name": "sample_11_spaghetti",
+      "algorithm": "Prime Check",
+      "category": "number_theory",
+      "file": "dataset/spaghetti/sample_11.cpp",
+      "is_spaghetti": true,
+      "severity_level": 1,
+      "metrics": [
+        "assignment_as_condition",
+        "uninitialized_variable"
+      ]
+    },
+    {
+      "id": 23,
+      "name": "sample_12",
+      "algorithm": "GCD",
+      "category": "number_theory",
+      "file": "dataset/normal/sample_12.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 24,
+      "name": "sample_12_spaghetti",
+      "algorithm": "GCD",
+      "category": "number_theory",
+      "file": "dataset/spaghetti/sample_12.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "signed_unsigned_comparison",
+        "arithmetic_overflow"
+      ]
+    },
+    {
+      "id": 25,
+      "name": "sample_13",
+      "algorithm": "LCM",
+      "category": "number_theory",
+      "file": "dataset/normal/sample_13.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 26,
+      "name": "sample_13_spaghetti",
+      "algorithm": "LCM",
+      "category": "number_theory",
+      "file": "dataset/spaghetti/sample_13.cpp",
+      "is_spaghetti": true,
+      "severity_level": 3,
+      "metrics": [
+        "unused_variable"
+      ]
+    },
+    {
+      "id": 27,
+      "name": "sample_14",
+      "algorithm": "Factorial",
+      "category": "number_theory",
+      "file": "dataset/normal/sample_14.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 28,
+      "name": "sample_14_spaghetti",
+      "algorithm": "Factorial",
+      "category": "number_theory",
+      "file": "dataset/spaghetti/sample_14.cpp",
+      "is_spaghetti": true,
+      "severity_level": 1,
+      "metrics": [
+        "assignment_as_condition",
+        "uninitialized_variable"
+      ]
+    },
+    {
+      "id": 29,
+      "name": "sample_15",
+      "algorithm": "Fibonacci",
+      "category": "number_theory",
+      "file": "dataset/normal/sample_15.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 30,
+      "name": "sample_15_spaghetti",
+      "algorithm": "Fibonacci",
+      "category": "number_theory",
+      "file": "dataset/spaghetti/sample_15.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "signed_unsigned_comparison"
+      ]
+    },
+    {
+      "id": 31,
+      "name": "sample_16",
+      "algorithm": "Perfect Number",
+      "category": "number_theory",
+      "file": "dataset/normal/sample_16.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 32,
+      "name": "sample_16_spaghetti",
+      "algorithm": "Perfect Number",
+      "category": "number_theory",
+      "file": "dataset/spaghetti/sample_16.cpp",
+      "is_spaghetti": true,
+      "severity_level": 3,
+      "metrics": [
+        "unused_parameter",
+        "unused_variable"
+      ]
+    },
+    {
+      "id": 33,
+      "name": "sample_17",
+      "algorithm": "Palindrome Check",
+      "category": "string",
+      "file": "dataset/normal/sample_17.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 34,
+      "name": "sample_17_spaghetti",
+      "algorithm": "Palindrome Check",
+      "category": "string",
+      "file": "dataset/spaghetti/sample_17.cpp",
+      "is_spaghetti": true,
+      "severity_level": 1,
+      "metrics": [
+        "assignment_as_condition"
+      ]
+    },
+    {
+      "id": 35,
+      "name": "sample_18",
+      "algorithm": "String Reverse",
+      "category": "string",
+      "file": "dataset/normal/sample_18.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 36,
+      "name": "sample_18_spaghetti",
+      "algorithm": "String Reverse",
+      "category": "string",
+      "file": "dataset/spaghetti/sample_18.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "signed_unsigned_comparison"
+      ]
+    },
+    {
+      "id": 37,
+      "name": "sample_19",
+      "algorithm": "Anagram Check",
+      "category": "string",
+      "file": "dataset/normal/sample_19.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 38,
+      "name": "sample_19_spaghetti",
+      "algorithm": "Anagram Check",
+      "category": "string",
+      "file": "dataset/spaghetti/sample_19.cpp",
+      "is_spaghetti": true,
+      "severity_level": 3,
+      "metrics": [
+        "unused_variable",
+        "signed_unsigned_comparison"
+      ]
+    },
+    {
+      "id": 39,
+      "name": "sample_20",
+      "algorithm": "Vowel Count",
+      "category": "string",
+      "file": "dataset/normal/sample_20.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 40,
+      "name": "sample_20_spaghetti",
+      "algorithm": "Vowel Count",
+      "category": "string",
+      "file": "dataset/spaghetti/sample_20.cpp",
+      "is_spaghetti": true,
+      "severity_level": 1,
+      "metrics": [
+        "assignment_as_condition",
+        "uninitialized_variable"
+      ]
+    },
+    {
+      "id": 41,
+      "name": "sample_21",
+      "algorithm": "Find Maximum",
+      "category": "array",
+      "file": "dataset/normal/sample_21.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 42,
+      "name": "sample_21_spaghetti",
+      "algorithm": "Find Maximum",
+      "category": "array",
+      "file": "dataset/spaghetti/sample_21.cpp",
+      "is_spaghetti": true,
+      "severity_level": 1,
+      "metrics": [
+        "uninitialized_variable"
+      ]
+    },
+    {
+      "id": 43,
+      "name": "sample_22",
+      "algorithm": "Second Largest",
+      "category": "array",
+      "file": "dataset/normal/sample_22.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 44,
+      "name": "sample_22_spaghetti",
+      "algorithm": "Second Largest",
+      "category": "array",
+      "file": "dataset/spaghetti/sample_22.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "arithmetic_overflow"
+      ]
+    },
+    {
+      "id": 45,
+      "name": "sample_23",
+      "algorithm": "Rotate Array",
+      "category": "array",
+      "file": "dataset/normal/sample_23.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 46,
+      "name": "sample_23_spaghetti",
+      "algorithm": "Rotate Array",
+      "category": "array",
+      "file": "dataset/spaghetti/sample_23.cpp",
+      "is_spaghetti": true,
+      "severity_level": 3,
+      "metrics": [
+        "unused_parameter",
+        "unused_variable"
+      ]
+    },
+    {
+      "id": 47,
+      "name": "sample_24",
+      "algorithm": "Max Subarray Sum",
+      "category": "array",
+      "file": "dataset/normal/sample_24.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 48,
+      "name": "sample_24_spaghetti",
+      "algorithm": "Max Subarray Sum",
+      "category": "array",
+      "file": "dataset/spaghetti/sample_24.cpp",
+      "is_spaghetti": true,
+      "severity_level": 1,
+      "metrics": [
+        "uninitialized_variable",
+        "assignment_as_condition"
+      ]
+    },
+    {
+      "id": 49,
+      "name": "sample_25",
+      "algorithm": "Two Sum",
+      "category": "array",
+      "file": "dataset/normal/sample_25.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 50,
+      "name": "sample_25_spaghetti",
+      "algorithm": "Two Sum",
+      "category": "array",
+      "file": "dataset/spaghetti/sample_25.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "signed_unsigned_comparison"
+      ]
+    },
+    {
+      "id": 51,
+      "name": "sample_26",
+      "algorithm": "Remove Duplicates",
+      "category": "array",
+      "file": "dataset/normal/sample_26.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 52,
+      "name": "sample_26_spaghetti",
+      "algorithm": "Remove Duplicates",
+      "category": "array",
+      "file": "dataset/spaghetti/sample_26.cpp",
+      "is_spaghetti": true,
+      "severity_level": 3,
+      "metrics": [
+        "possible_infinite_loop"
+      ]
+    },
+    {
+      "id": 53,
+      "name": "sample_27",
+      "algorithm": "Coin Change",
+      "category": "dynamic_programming",
+      "file": "dataset/normal/sample_27.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 54,
+      "name": "sample_27_spaghetti",
+      "algorithm": "Coin Change",
+      "category": "dynamic_programming",
+      "file": "dataset/spaghetti/sample_27.cpp",
+      "is_spaghetti": true,
+      "severity_level": 1,
+      "metrics": [
+        "assignment_as_condition"
+      ]
+    },
+    {
+      "id": 55,
+      "name": "sample_28",
+      "algorithm": "Longest Increasing Subsequence",
+      "category": "dynamic_programming",
+      "file": "dataset/normal/sample_28.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 56,
+      "name": "sample_28_spaghetti",
+      "algorithm": "Longest Increasing Subsequence",
+      "category": "dynamic_programming",
+      "file": "dataset/spaghetti/sample_28.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "signed_unsigned_comparison"
+      ]
+    },
+    {
+      "id": 57,
+      "name": "sample_29",
+      "algorithm": "0/1 Knapsack",
+      "category": "dynamic_programming",
+      "file": "dataset/normal/sample_29.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 58,
+      "name": "sample_29_spaghetti",
+      "algorithm": "0/1 Knapsack",
+      "category": "dynamic_programming",
+      "file": "dataset/spaghetti/sample_29.cpp",
+      "is_spaghetti": true,
+      "severity_level": 3,
+      "metrics": [
+        "unused_variable"
+      ]
+    },
+    {
+      "id": 59,
+      "name": "sample_30",
+      "algorithm": "Min Steps to 1",
+      "category": "dynamic_programming",
+      "file": "dataset/normal/sample_30.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 60,
+      "name": "sample_30_spaghetti",
+      "algorithm": "Min Steps to 1",
+      "category": "dynamic_programming",
+      "file": "dataset/spaghetti/sample_30.cpp",
+      "is_spaghetti": true,
+      "severity_level": 1,
+      "metrics": [
+        "assignment_as_condition"
+      ]
+    },
+    {
+      "id": 61,
+      "name": "sample_31",
+      "algorithm": "Activity Selection",
+      "category": "greedy",
+      "file": "dataset/normal/sample_31.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 62,
+      "name": "sample_31_spaghetti",
+      "algorithm": "Activity Selection",
+      "category": "greedy",
+      "file": "dataset/spaghetti/sample_31.cpp",
+      "is_spaghetti": true,
+      "severity_level": 3,
+      "metrics": [
+        "misleading_indentation"
+      ]
+    },
+    {
+      "id": 63,
+      "name": "sample_32",
+      "algorithm": "Fractional Knapsack",
+      "category": "greedy",
+      "file": "dataset/normal/sample_32.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 64,
+      "name": "sample_32_spaghetti",
+      "algorithm": "Fractional Knapsack",
+      "category": "greedy",
+      "file": "dataset/spaghetti/sample_32.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "division_by_zero"
+      ]
+    },
+    {
+      "id": 65,
+      "name": "sample_33",
+      "algorithm": "Character Frequency",
+      "category": "greedy",
+      "file": "dataset/normal/sample_33.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 66,
+      "name": "sample_33_spaghetti",
+      "algorithm": "Character Frequency",
+      "category": "greedy",
+      "file": "dataset/spaghetti/sample_33.cpp",
+      "is_spaghetti": true,
+      "severity_level": 1,
+      "metrics": [
+        "uninitialized_variable"
+      ]
+    },
+    {
+      "id": 67,
+      "name": "sample_34",
+      "algorithm": "Job Scheduling",
+      "category": "greedy",
+      "file": "dataset/normal/sample_34.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 68,
+      "name": "sample_34_spaghetti",
+      "algorithm": "Job Scheduling",
+      "category": "greedy",
+      "file": "dataset/spaghetti/sample_34.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "arithmetic_overflow"
+      ]
+    },
+    {
+      "id": 69,
+      "name": "sample_35",
+      "algorithm": "N-Queens (4x4)",
+      "category": "backtracking",
+      "file": "dataset/normal/sample_35.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 70,
+      "name": "sample_35_spaghetti",
+      "algorithm": "N-Queens (4x4)",
+      "category": "backtracking",
+      "file": "dataset/spaghetti/sample_35.cpp",
+      "is_spaghetti": true,
+      "severity_level": 3,
+      "metrics": [
+        "unused_variable"
+      ]
+    },
+    {
+      "id": 71,
+      "name": "sample_36",
+      "algorithm": "Subset Sum",
+      "category": "recursion",
+      "file": "dataset/normal/sample_36.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 72,
+      "name": "sample_36_spaghetti",
+      "algorithm": "Subset Sum",
+      "category": "recursion",
+      "file": "dataset/spaghetti/sample_36.cpp",
+      "is_spaghetti": true,
+      "severity_level": 1,
+      "metrics": [
+        "assignment_as_condition"
+      ]
+    },
+    {
+      "id": 73,
+      "name": "sample_37",
+      "algorithm": "Permutations",
+      "category": "recursion",
+      "file": "dataset/normal/sample_37.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 74,
+      "name": "sample_37_spaghetti",
+      "algorithm": "Permutations",
+      "category": "recursion",
+      "file": "dataset/spaghetti/sample_37.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "signed_unsigned_comparison"
+      ]
+    },
+    {
+      "id": 75,
+      "name": "sample_38",
+      "algorithm": "Tower of Hanoi",
+      "category": "recursion",
+      "file": "dataset/normal/sample_38.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 76,
+      "name": "sample_38_spaghetti",
+      "algorithm": "Tower of Hanoi",
+      "category": "recursion",
+      "file": "dataset/spaghetti/sample_38.cpp",
+      "is_spaghetti": true,
+      "severity_level": 3,
+      "metrics": [
+        "unused_function"
+      ]
+    },
+    {
+      "id": 77,
+      "name": "sample_39",
+      "algorithm": "Power (Recursive)",
+      "category": "recursion",
+      "file": "dataset/normal/sample_39.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 78,
+      "name": "sample_39_spaghetti",
+      "algorithm": "Power (Recursive)",
+      "category": "recursion",
+      "file": "dataset/spaghetti/sample_39.cpp",
+      "is_spaghetti": true,
+      "severity_level": 1,
+      "metrics": [
+        "uninitialized_variable",
+        "assignment_as_condition"
+      ]
+    },
+    {
+      "id": 79,
+      "name": "sample_40",
+      "algorithm": "Sum of Digits",
+      "category": "recursion",
+      "file": "dataset/normal/sample_40.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 80,
+      "name": "sample_40_spaghetti",
+      "algorithm": "Sum of Digits",
+      "category": "recursion",
+      "file": "dataset/spaghetti/sample_40.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "signed_unsigned_comparison"
+      ]
+    },
+    {
+      "id": 81,
+      "name": "sample_41",
+      "algorithm": "DFS",
+      "category": "graph",
+      "file": "dataset/normal/sample_41.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 82,
+      "name": "sample_41_spaghetti",
+      "algorithm": "DFS",
+      "category": "graph",
+      "file": "dataset/spaghetti/sample_41.cpp",
+      "is_spaghetti": true,
+      "severity_level": 1,
+      "metrics": [
+        "assignment_as_condition"
+      ]
+    },
+    {
+      "id": 83,
+      "name": "sample_42",
+      "algorithm": "BFS",
+      "category": "graph",
+      "file": "dataset/normal/sample_42.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 84,
+      "name": "sample_42_spaghetti",
+      "algorithm": "BFS",
+      "category": "graph",
+      "file": "dataset/spaghetti/sample_42.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "signed_unsigned_comparison"
+      ]
+    },
+    {
+      "id": 85,
+      "name": "sample_43",
+      "algorithm": "Shortest Path",
+      "category": "graph",
+      "file": "dataset/normal/sample_43.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 86,
+      "name": "sample_43_spaghetti",
+      "algorithm": "Shortest Path",
+      "category": "graph",
+      "file": "dataset/spaghetti/sample_43.cpp",
+      "is_spaghetti": true,
+      "severity_level": 3,
+      "metrics": [
+        "unused_variable"
+      ]
+    },
+    {
+      "id": 87,
+      "name": "sample_44",
+      "algorithm": "Cycle Detection",
+      "category": "graph",
+      "file": "dataset/normal/sample_44.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 88,
+      "name": "sample_44_spaghetti",
+      "algorithm": "Cycle Detection",
+      "category": "graph",
+      "file": "dataset/spaghetti/sample_44.cpp",
+      "is_spaghetti": true,
+      "severity_level": 1,
+      "metrics": [
+        "assignment_as_condition"
+      ]
+    },
+    {
+      "id": 89,
+      "name": "sample_45",
+      "algorithm": "Stack",
+      "category": "data_structure",
+      "file": "dataset/normal/sample_45.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 90,
+      "name": "sample_45_spaghetti",
+      "algorithm": "Stack",
+      "category": "data_structure",
+      "file": "dataset/spaghetti/sample_45.cpp",
+      "is_spaghetti": true,
+      "severity_level": 1,
+      "metrics": [
+        "assignment_as_condition"
+      ]
+    },
+    {
+      "id": 91,
+      "name": "sample_46",
+      "algorithm": "Queue",
+      "category": "data_structure",
+      "file": "dataset/normal/sample_46.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 92,
+      "name": "sample_46_spaghetti",
+      "algorithm": "Queue",
+      "category": "data_structure",
+      "file": "dataset/spaghetti/sample_46.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "signed_unsigned_comparison"
+      ]
+    },
+    {
+      "id": 93,
+      "name": "sample_47",
+      "algorithm": "Simple Calculator",
+      "category": "misc",
+      "file": "dataset/normal/sample_47.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 94,
+      "name": "sample_47_spaghetti",
+      "algorithm": "Simple Calculator",
+      "category": "misc",
+      "file": "dataset/spaghetti/sample_47.cpp",
+      "is_spaghetti": true,
+      "severity_level": 1,
+      "metrics": [
+        "assignment_as_condition"
+      ]
+    },
+    {
+      "id": 95,
+      "name": "sample_48",
+      "algorithm": "Reverse Number",
+      "category": "misc",
+      "file": "dataset/normal/sample_48.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 96,
+      "name": "sample_48_spaghetti",
+      "algorithm": "Reverse Number",
+      "category": "misc",
+      "file": "dataset/spaghetti/sample_48.cpp",
+      "is_spaghetti": true,
+      "severity_level": 3,
+      "metrics": [
+        "unused_variable",
+        "misleading_indentation"
+      ]
+    },
+    {
+      "id": 97,
+      "name": "sample_49",
+      "algorithm": "Armstrong Number",
+      "category": "misc",
+      "file": "dataset/normal/sample_49.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 98,
+      "name": "sample_49_spaghetti",
+      "algorithm": "Armstrong Number",
+      "category": "misc",
+      "file": "dataset/spaghetti/sample_49.cpp",
+      "is_spaghetti": true,
+      "severity_level": 1,
+      "metrics": [
+        "uninitialized_variable",
+        "assignment_as_condition"
+      ]
+    },
+    {
+      "id": 99,
+      "name": "sample_50",
+      "algorithm": "Simplify Fraction",
+      "category": "misc",
+      "file": "dataset/normal/sample_50.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 100,
+      "name": "sample_50_spaghetti",
+      "algorithm": "Simplify Fraction",
+      "category": "misc",
+      "file": "dataset/spaghetti/sample_50.cpp",
+      "is_spaghetti": true,
+      "severity_level": 3,
+      "metrics": [
+        "unused_parameter"
+      ]
+    },
+    {
+      "id": 101,
+      "name": "sample_51",
+      "algorithm": "Algorithm 51",
+      "category": "generated",
+      "file": "dataset/normal/sample_51.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 102,
+      "name": "sample_51_spaghetti",
+      "algorithm": "Algorithm 51",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_51.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 103,
+      "name": "sample_52",
+      "algorithm": "Algorithm 52",
+      "category": "generated",
+      "file": "dataset/normal/sample_52.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 104,
+      "name": "sample_52_spaghetti",
+      "algorithm": "Algorithm 52",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_52.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 105,
+      "name": "sample_53",
+      "algorithm": "Algorithm 53",
+      "category": "generated",
+      "file": "dataset/normal/sample_53.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 106,
+      "name": "sample_53_spaghetti",
+      "algorithm": "Algorithm 53",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_53.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 107,
+      "name": "sample_54",
+      "algorithm": "Algorithm 54",
+      "category": "generated",
+      "file": "dataset/normal/sample_54.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 108,
+      "name": "sample_54_spaghetti",
+      "algorithm": "Algorithm 54",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_54.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 109,
+      "name": "sample_55",
+      "algorithm": "Algorithm 55",
+      "category": "generated",
+      "file": "dataset/normal/sample_55.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 110,
+      "name": "sample_55_spaghetti",
+      "algorithm": "Algorithm 55",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_55.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 111,
+      "name": "sample_56",
+      "algorithm": "Algorithm 56",
+      "category": "generated",
+      "file": "dataset/normal/sample_56.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 112,
+      "name": "sample_56_spaghetti",
+      "algorithm": "Algorithm 56",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_56.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 113,
+      "name": "sample_57",
+      "algorithm": "Algorithm 57",
+      "category": "generated",
+      "file": "dataset/normal/sample_57.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 114,
+      "name": "sample_57_spaghetti",
+      "algorithm": "Algorithm 57",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_57.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 115,
+      "name": "sample_58",
+      "algorithm": "Algorithm 58",
+      "category": "generated",
+      "file": "dataset/normal/sample_58.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 116,
+      "name": "sample_58_spaghetti",
+      "algorithm": "Algorithm 58",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_58.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 117,
+      "name": "sample_59",
+      "algorithm": "Algorithm 59",
+      "category": "generated",
+      "file": "dataset/normal/sample_59.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 118,
+      "name": "sample_59_spaghetti",
+      "algorithm": "Algorithm 59",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_59.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 119,
+      "name": "sample_60",
+      "algorithm": "Algorithm 60",
+      "category": "generated",
+      "file": "dataset/normal/sample_60.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 120,
+      "name": "sample_60_spaghetti",
+      "algorithm": "Algorithm 60",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_60.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 121,
+      "name": "sample_61",
+      "algorithm": "Algorithm 61",
+      "category": "generated",
+      "file": "dataset/normal/sample_61.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 122,
+      "name": "sample_61_spaghetti",
+      "algorithm": "Algorithm 61",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_61.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 123,
+      "name": "sample_62",
+      "algorithm": "Algorithm 62",
+      "category": "generated",
+      "file": "dataset/normal/sample_62.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 124,
+      "name": "sample_62_spaghetti",
+      "algorithm": "Algorithm 62",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_62.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 125,
+      "name": "sample_63",
+      "algorithm": "Algorithm 63",
+      "category": "generated",
+      "file": "dataset/normal/sample_63.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 126,
+      "name": "sample_63_spaghetti",
+      "algorithm": "Algorithm 63",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_63.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 127,
+      "name": "sample_64",
+      "algorithm": "Algorithm 64",
+      "category": "generated",
+      "file": "dataset/normal/sample_64.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 128,
+      "name": "sample_64_spaghetti",
+      "algorithm": "Algorithm 64",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_64.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 129,
+      "name": "sample_65",
+      "algorithm": "Algorithm 65",
+      "category": "generated",
+      "file": "dataset/normal/sample_65.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 130,
+      "name": "sample_65_spaghetti",
+      "algorithm": "Algorithm 65",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_65.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 131,
+      "name": "sample_66",
+      "algorithm": "Algorithm 66",
+      "category": "generated",
+      "file": "dataset/normal/sample_66.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 132,
+      "name": "sample_66_spaghetti",
+      "algorithm": "Algorithm 66",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_66.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 133,
+      "name": "sample_67",
+      "algorithm": "Algorithm 67",
+      "category": "generated",
+      "file": "dataset/normal/sample_67.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 134,
+      "name": "sample_67_spaghetti",
+      "algorithm": "Algorithm 67",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_67.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 135,
+      "name": "sample_68",
+      "algorithm": "Algorithm 68",
+      "category": "generated",
+      "file": "dataset/normal/sample_68.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 136,
+      "name": "sample_68_spaghetti",
+      "algorithm": "Algorithm 68",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_68.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 137,
+      "name": "sample_69",
+      "algorithm": "Algorithm 69",
+      "category": "generated",
+      "file": "dataset/normal/sample_69.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 138,
+      "name": "sample_69_spaghetti",
+      "algorithm": "Algorithm 69",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_69.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 139,
+      "name": "sample_70",
+      "algorithm": "Algorithm 70",
+      "category": "generated",
+      "file": "dataset/normal/sample_70.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 140,
+      "name": "sample_70_spaghetti",
+      "algorithm": "Algorithm 70",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_70.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 141,
+      "name": "sample_71",
+      "algorithm": "Algorithm 71",
+      "category": "generated",
+      "file": "dataset/normal/sample_71.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 142,
+      "name": "sample_71_spaghetti",
+      "algorithm": "Algorithm 71",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_71.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 143,
+      "name": "sample_72",
+      "algorithm": "Algorithm 72",
+      "category": "generated",
+      "file": "dataset/normal/sample_72.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 144,
+      "name": "sample_72_spaghetti",
+      "algorithm": "Algorithm 72",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_72.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 145,
+      "name": "sample_73",
+      "algorithm": "Algorithm 73",
+      "category": "generated",
+      "file": "dataset/normal/sample_73.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 146,
+      "name": "sample_73_spaghetti",
+      "algorithm": "Algorithm 73",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_73.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 147,
+      "name": "sample_74",
+      "algorithm": "Algorithm 74",
+      "category": "generated",
+      "file": "dataset/normal/sample_74.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 148,
+      "name": "sample_74_spaghetti",
+      "algorithm": "Algorithm 74",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_74.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 149,
+      "name": "sample_75",
+      "algorithm": "Algorithm 75",
+      "category": "generated",
+      "file": "dataset/normal/sample_75.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 150,
+      "name": "sample_75_spaghetti",
+      "algorithm": "Algorithm 75",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_75.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 151,
+      "name": "sample_76",
+      "algorithm": "Algorithm 76",
+      "category": "generated",
+      "file": "dataset/normal/sample_76.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 152,
+      "name": "sample_76_spaghetti",
+      "algorithm": "Algorithm 76",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_76.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 153,
+      "name": "sample_77",
+      "algorithm": "Algorithm 77",
+      "category": "generated",
+      "file": "dataset/normal/sample_77.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 154,
+      "name": "sample_77_spaghetti",
+      "algorithm": "Algorithm 77",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_77.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 155,
+      "name": "sample_78",
+      "algorithm": "Algorithm 78",
+      "category": "generated",
+      "file": "dataset/normal/sample_78.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 156,
+      "name": "sample_78_spaghetti",
+      "algorithm": "Algorithm 78",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_78.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 157,
+      "name": "sample_79",
+      "algorithm": "Algorithm 79",
+      "category": "generated",
+      "file": "dataset/normal/sample_79.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 158,
+      "name": "sample_79_spaghetti",
+      "algorithm": "Algorithm 79",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_79.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 159,
+      "name": "sample_80",
+      "algorithm": "Algorithm 80",
+      "category": "generated",
+      "file": "dataset/normal/sample_80.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 160,
+      "name": "sample_80_spaghetti",
+      "algorithm": "Algorithm 80",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_80.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 161,
+      "name": "sample_81",
+      "algorithm": "Algorithm 81",
+      "category": "generated",
+      "file": "dataset/normal/sample_81.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 162,
+      "name": "sample_81_spaghetti",
+      "algorithm": "Algorithm 81",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_81.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 163,
+      "name": "sample_82",
+      "algorithm": "Algorithm 82",
+      "category": "generated",
+      "file": "dataset/normal/sample_82.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 164,
+      "name": "sample_82_spaghetti",
+      "algorithm": "Algorithm 82",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_82.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 165,
+      "name": "sample_83",
+      "algorithm": "Algorithm 83",
+      "category": "generated",
+      "file": "dataset/normal/sample_83.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 166,
+      "name": "sample_83_spaghetti",
+      "algorithm": "Algorithm 83",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_83.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 167,
+      "name": "sample_84",
+      "algorithm": "Algorithm 84",
+      "category": "generated",
+      "file": "dataset/normal/sample_84.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 168,
+      "name": "sample_84_spaghetti",
+      "algorithm": "Algorithm 84",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_84.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 169,
+      "name": "sample_85",
+      "algorithm": "Algorithm 85",
+      "category": "generated",
+      "file": "dataset/normal/sample_85.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 170,
+      "name": "sample_85_spaghetti",
+      "algorithm": "Algorithm 85",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_85.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 171,
+      "name": "sample_86",
+      "algorithm": "Algorithm 86",
+      "category": "generated",
+      "file": "dataset/normal/sample_86.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 172,
+      "name": "sample_86_spaghetti",
+      "algorithm": "Algorithm 86",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_86.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 173,
+      "name": "sample_87",
+      "algorithm": "Algorithm 87",
+      "category": "generated",
+      "file": "dataset/normal/sample_87.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 174,
+      "name": "sample_87_spaghetti",
+      "algorithm": "Algorithm 87",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_87.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 175,
+      "name": "sample_88",
+      "algorithm": "Algorithm 88",
+      "category": "generated",
+      "file": "dataset/normal/sample_88.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 176,
+      "name": "sample_88_spaghetti",
+      "algorithm": "Algorithm 88",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_88.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 177,
+      "name": "sample_89",
+      "algorithm": "Algorithm 89",
+      "category": "generated",
+      "file": "dataset/normal/sample_89.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 178,
+      "name": "sample_89_spaghetti",
+      "algorithm": "Algorithm 89",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_89.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 179,
+      "name": "sample_90",
+      "algorithm": "Algorithm 90",
+      "category": "generated",
+      "file": "dataset/normal/sample_90.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 180,
+      "name": "sample_90_spaghetti",
+      "algorithm": "Algorithm 90",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_90.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 181,
+      "name": "sample_91",
+      "algorithm": "Algorithm 91",
+      "category": "generated",
+      "file": "dataset/normal/sample_91.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 182,
+      "name": "sample_91_spaghetti",
+      "algorithm": "Algorithm 91",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_91.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 183,
+      "name": "sample_92",
+      "algorithm": "Algorithm 92",
+      "category": "generated",
+      "file": "dataset/normal/sample_92.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 184,
+      "name": "sample_92_spaghetti",
+      "algorithm": "Algorithm 92",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_92.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 185,
+      "name": "sample_93",
+      "algorithm": "Algorithm 93",
+      "category": "generated",
+      "file": "dataset/normal/sample_93.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 186,
+      "name": "sample_93_spaghetti",
+      "algorithm": "Algorithm 93",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_93.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 187,
+      "name": "sample_94",
+      "algorithm": "Algorithm 94",
+      "category": "generated",
+      "file": "dataset/normal/sample_94.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 188,
+      "name": "sample_94_spaghetti",
+      "algorithm": "Algorithm 94",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_94.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 189,
+      "name": "sample_95",
+      "algorithm": "Algorithm 95",
+      "category": "generated",
+      "file": "dataset/normal/sample_95.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 190,
+      "name": "sample_95_spaghetti",
+      "algorithm": "Algorithm 95",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_95.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 191,
+      "name": "sample_96",
+      "algorithm": "Algorithm 96",
+      "category": "generated",
+      "file": "dataset/normal/sample_96.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 192,
+      "name": "sample_96_spaghetti",
+      "algorithm": "Algorithm 96",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_96.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 193,
+      "name": "sample_97",
+      "algorithm": "Algorithm 97",
+      "category": "generated",
+      "file": "dataset/normal/sample_97.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 194,
+      "name": "sample_97_spaghetti",
+      "algorithm": "Algorithm 97",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_97.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 195,
+      "name": "sample_98",
+      "algorithm": "Algorithm 98",
+      "category": "generated",
+      "file": "dataset/normal/sample_98.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 196,
+      "name": "sample_98_spaghetti",
+      "algorithm": "Algorithm 98",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_98.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 197,
+      "name": "sample_99",
+      "algorithm": "Algorithm 99",
+      "category": "generated",
+      "file": "dataset/normal/sample_99.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 198,
+      "name": "sample_99_spaghetti",
+      "algorithm": "Algorithm 99",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_99.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 199,
+      "name": "sample_100",
+      "algorithm": "Algorithm 100",
+      "category": "generated",
+      "file": "dataset/normal/sample_100.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 200,
+      "name": "sample_100_spaghetti",
+      "algorithm": "Algorithm 100",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_100.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 201,
+      "name": "sample_101",
+      "algorithm": "Algorithm 101",
+      "category": "generated",
+      "file": "dataset/normal/sample_101.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 202,
+      "name": "sample_101_spaghetti",
+      "algorithm": "Algorithm 101",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_101.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 203,
+      "name": "sample_102",
+      "algorithm": "Algorithm 102",
+      "category": "generated",
+      "file": "dataset/normal/sample_102.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 204,
+      "name": "sample_102_spaghetti",
+      "algorithm": "Algorithm 102",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_102.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 205,
+      "name": "sample_103",
+      "algorithm": "Algorithm 103",
+      "category": "generated",
+      "file": "dataset/normal/sample_103.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 206,
+      "name": "sample_103_spaghetti",
+      "algorithm": "Algorithm 103",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_103.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 207,
+      "name": "sample_104",
+      "algorithm": "Algorithm 104",
+      "category": "generated",
+      "file": "dataset/normal/sample_104.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 208,
+      "name": "sample_104_spaghetti",
+      "algorithm": "Algorithm 104",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_104.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 209,
+      "name": "sample_105",
+      "algorithm": "Algorithm 105",
+      "category": "generated",
+      "file": "dataset/normal/sample_105.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 210,
+      "name": "sample_105_spaghetti",
+      "algorithm": "Algorithm 105",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_105.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 211,
+      "name": "sample_106",
+      "algorithm": "Algorithm 106",
+      "category": "generated",
+      "file": "dataset/normal/sample_106.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 212,
+      "name": "sample_106_spaghetti",
+      "algorithm": "Algorithm 106",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_106.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 213,
+      "name": "sample_107",
+      "algorithm": "Algorithm 107",
+      "category": "generated",
+      "file": "dataset/normal/sample_107.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 214,
+      "name": "sample_107_spaghetti",
+      "algorithm": "Algorithm 107",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_107.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 215,
+      "name": "sample_108",
+      "algorithm": "Algorithm 108",
+      "category": "generated",
+      "file": "dataset/normal/sample_108.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 216,
+      "name": "sample_108_spaghetti",
+      "algorithm": "Algorithm 108",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_108.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 217,
+      "name": "sample_109",
+      "algorithm": "Algorithm 109",
+      "category": "generated",
+      "file": "dataset/normal/sample_109.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 218,
+      "name": "sample_109_spaghetti",
+      "algorithm": "Algorithm 109",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_109.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 219,
+      "name": "sample_110",
+      "algorithm": "Algorithm 110",
+      "category": "generated",
+      "file": "dataset/normal/sample_110.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 220,
+      "name": "sample_110_spaghetti",
+      "algorithm": "Algorithm 110",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_110.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 221,
+      "name": "sample_111",
+      "algorithm": "Algorithm 111",
+      "category": "generated",
+      "file": "dataset/normal/sample_111.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 222,
+      "name": "sample_111_spaghetti",
+      "algorithm": "Algorithm 111",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_111.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 223,
+      "name": "sample_112",
+      "algorithm": "Algorithm 112",
+      "category": "generated",
+      "file": "dataset/normal/sample_112.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 224,
+      "name": "sample_112_spaghetti",
+      "algorithm": "Algorithm 112",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_112.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 225,
+      "name": "sample_113",
+      "algorithm": "Algorithm 113",
+      "category": "generated",
+      "file": "dataset/normal/sample_113.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 226,
+      "name": "sample_113_spaghetti",
+      "algorithm": "Algorithm 113",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_113.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 227,
+      "name": "sample_114",
+      "algorithm": "Algorithm 114",
+      "category": "generated",
+      "file": "dataset/normal/sample_114.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 228,
+      "name": "sample_114_spaghetti",
+      "algorithm": "Algorithm 114",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_114.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 229,
+      "name": "sample_115",
+      "algorithm": "Algorithm 115",
+      "category": "generated",
+      "file": "dataset/normal/sample_115.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 230,
+      "name": "sample_115_spaghetti",
+      "algorithm": "Algorithm 115",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_115.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 231,
+      "name": "sample_116",
+      "algorithm": "Algorithm 116",
+      "category": "generated",
+      "file": "dataset/normal/sample_116.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 232,
+      "name": "sample_116_spaghetti",
+      "algorithm": "Algorithm 116",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_116.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 233,
+      "name": "sample_117",
+      "algorithm": "Algorithm 117",
+      "category": "generated",
+      "file": "dataset/normal/sample_117.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 234,
+      "name": "sample_117_spaghetti",
+      "algorithm": "Algorithm 117",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_117.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 235,
+      "name": "sample_118",
+      "algorithm": "Algorithm 118",
+      "category": "generated",
+      "file": "dataset/normal/sample_118.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 236,
+      "name": "sample_118_spaghetti",
+      "algorithm": "Algorithm 118",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_118.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 237,
+      "name": "sample_119",
+      "algorithm": "Algorithm 119",
+      "category": "generated",
+      "file": "dataset/normal/sample_119.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 238,
+      "name": "sample_119_spaghetti",
+      "algorithm": "Algorithm 119",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_119.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 239,
+      "name": "sample_120",
+      "algorithm": "Algorithm 120",
+      "category": "generated",
+      "file": "dataset/normal/sample_120.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 240,
+      "name": "sample_120_spaghetti",
+      "algorithm": "Algorithm 120",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_120.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 241,
+      "name": "sample_121",
+      "algorithm": "Algorithm 121",
+      "category": "generated",
+      "file": "dataset/normal/sample_121.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 242,
+      "name": "sample_121_spaghetti",
+      "algorithm": "Algorithm 121",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_121.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 243,
+      "name": "sample_122",
+      "algorithm": "Algorithm 122",
+      "category": "generated",
+      "file": "dataset/normal/sample_122.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 244,
+      "name": "sample_122_spaghetti",
+      "algorithm": "Algorithm 122",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_122.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 245,
+      "name": "sample_123",
+      "algorithm": "Algorithm 123",
+      "category": "generated",
+      "file": "dataset/normal/sample_123.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 246,
+      "name": "sample_123_spaghetti",
+      "algorithm": "Algorithm 123",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_123.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 247,
+      "name": "sample_124",
+      "algorithm": "Algorithm 124",
+      "category": "generated",
+      "file": "dataset/normal/sample_124.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 248,
+      "name": "sample_124_spaghetti",
+      "algorithm": "Algorithm 124",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_124.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 249,
+      "name": "sample_125",
+      "algorithm": "Algorithm 125",
+      "category": "generated",
+      "file": "dataset/normal/sample_125.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 250,
+      "name": "sample_125_spaghetti",
+      "algorithm": "Algorithm 125",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_125.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 251,
+      "name": "sample_126",
+      "algorithm": "Algorithm 126",
+      "category": "generated",
+      "file": "dataset/normal/sample_126.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 252,
+      "name": "sample_126_spaghetti",
+      "algorithm": "Algorithm 126",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_126.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 253,
+      "name": "sample_127",
+      "algorithm": "Algorithm 127",
+      "category": "generated",
+      "file": "dataset/normal/sample_127.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 254,
+      "name": "sample_127_spaghetti",
+      "algorithm": "Algorithm 127",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_127.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 255,
+      "name": "sample_128",
+      "algorithm": "Algorithm 128",
+      "category": "generated",
+      "file": "dataset/normal/sample_128.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 256,
+      "name": "sample_128_spaghetti",
+      "algorithm": "Algorithm 128",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_128.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 257,
+      "name": "sample_129",
+      "algorithm": "Algorithm 129",
+      "category": "generated",
+      "file": "dataset/normal/sample_129.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 258,
+      "name": "sample_129_spaghetti",
+      "algorithm": "Algorithm 129",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_129.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 259,
+      "name": "sample_130",
+      "algorithm": "Algorithm 130",
+      "category": "generated",
+      "file": "dataset/normal/sample_130.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 260,
+      "name": "sample_130_spaghetti",
+      "algorithm": "Algorithm 130",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_130.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 261,
+      "name": "sample_131",
+      "algorithm": "Algorithm 131",
+      "category": "generated",
+      "file": "dataset/normal/sample_131.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 262,
+      "name": "sample_131_spaghetti",
+      "algorithm": "Algorithm 131",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_131.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 263,
+      "name": "sample_132",
+      "algorithm": "Algorithm 132",
+      "category": "generated",
+      "file": "dataset/normal/sample_132.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 264,
+      "name": "sample_132_spaghetti",
+      "algorithm": "Algorithm 132",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_132.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 265,
+      "name": "sample_133",
+      "algorithm": "Algorithm 133",
+      "category": "generated",
+      "file": "dataset/normal/sample_133.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 266,
+      "name": "sample_133_spaghetti",
+      "algorithm": "Algorithm 133",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_133.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 267,
+      "name": "sample_134",
+      "algorithm": "Algorithm 134",
+      "category": "generated",
+      "file": "dataset/normal/sample_134.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 268,
+      "name": "sample_134_spaghetti",
+      "algorithm": "Algorithm 134",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_134.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 269,
+      "name": "sample_135",
+      "algorithm": "Algorithm 135",
+      "category": "generated",
+      "file": "dataset/normal/sample_135.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 270,
+      "name": "sample_135_spaghetti",
+      "algorithm": "Algorithm 135",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_135.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 271,
+      "name": "sample_136",
+      "algorithm": "Algorithm 136",
+      "category": "generated",
+      "file": "dataset/normal/sample_136.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 272,
+      "name": "sample_136_spaghetti",
+      "algorithm": "Algorithm 136",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_136.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 273,
+      "name": "sample_137",
+      "algorithm": "Algorithm 137",
+      "category": "generated",
+      "file": "dataset/normal/sample_137.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 274,
+      "name": "sample_137_spaghetti",
+      "algorithm": "Algorithm 137",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_137.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 275,
+      "name": "sample_138",
+      "algorithm": "Algorithm 138",
+      "category": "generated",
+      "file": "dataset/normal/sample_138.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 276,
+      "name": "sample_138_spaghetti",
+      "algorithm": "Algorithm 138",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_138.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 277,
+      "name": "sample_139",
+      "algorithm": "Algorithm 139",
+      "category": "generated",
+      "file": "dataset/normal/sample_139.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 278,
+      "name": "sample_139_spaghetti",
+      "algorithm": "Algorithm 139",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_139.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 279,
+      "name": "sample_140",
+      "algorithm": "Algorithm 140",
+      "category": "generated",
+      "file": "dataset/normal/sample_140.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 280,
+      "name": "sample_140_spaghetti",
+      "algorithm": "Algorithm 140",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_140.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 281,
+      "name": "sample_141",
+      "algorithm": "Algorithm 141",
+      "category": "generated",
+      "file": "dataset/normal/sample_141.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 282,
+      "name": "sample_141_spaghetti",
+      "algorithm": "Algorithm 141",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_141.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 283,
+      "name": "sample_142",
+      "algorithm": "Algorithm 142",
+      "category": "generated",
+      "file": "dataset/normal/sample_142.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 284,
+      "name": "sample_142_spaghetti",
+      "algorithm": "Algorithm 142",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_142.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 285,
+      "name": "sample_143",
+      "algorithm": "Algorithm 143",
+      "category": "generated",
+      "file": "dataset/normal/sample_143.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 286,
+      "name": "sample_143_spaghetti",
+      "algorithm": "Algorithm 143",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_143.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 287,
+      "name": "sample_144",
+      "algorithm": "Algorithm 144",
+      "category": "generated",
+      "file": "dataset/normal/sample_144.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 288,
+      "name": "sample_144_spaghetti",
+      "algorithm": "Algorithm 144",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_144.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 289,
+      "name": "sample_145",
+      "algorithm": "Algorithm 145",
+      "category": "generated",
+      "file": "dataset/normal/sample_145.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 290,
+      "name": "sample_145_spaghetti",
+      "algorithm": "Algorithm 145",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_145.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 291,
+      "name": "sample_146",
+      "algorithm": "Algorithm 146",
+      "category": "generated",
+      "file": "dataset/normal/sample_146.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 292,
+      "name": "sample_146_spaghetti",
+      "algorithm": "Algorithm 146",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_146.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 293,
+      "name": "sample_147",
+      "algorithm": "Algorithm 147",
+      "category": "generated",
+      "file": "dataset/normal/sample_147.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 294,
+      "name": "sample_147_spaghetti",
+      "algorithm": "Algorithm 147",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_147.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 295,
+      "name": "sample_148",
+      "algorithm": "Algorithm 148",
+      "category": "generated",
+      "file": "dataset/normal/sample_148.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 296,
+      "name": "sample_148_spaghetti",
+      "algorithm": "Algorithm 148",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_148.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 297,
+      "name": "sample_149",
+      "algorithm": "Algorithm 149",
+      "category": "generated",
+      "file": "dataset/normal/sample_149.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 298,
+      "name": "sample_149_spaghetti",
+      "algorithm": "Algorithm 149",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_149.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 299,
+      "name": "sample_150",
+      "algorithm": "Algorithm 150",
+      "category": "generated",
+      "file": "dataset/normal/sample_150.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 300,
+      "name": "sample_150_spaghetti",
+      "algorithm": "Algorithm 150",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_150.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 301,
+      "name": "sample_151",
+      "algorithm": "Algorithm 151",
+      "category": "generated",
+      "file": "dataset/normal/sample_151.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 302,
+      "name": "sample_151_spaghetti",
+      "algorithm": "Algorithm 151",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_151.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 303,
+      "name": "sample_152",
+      "algorithm": "Algorithm 152",
+      "category": "generated",
+      "file": "dataset/normal/sample_152.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 304,
+      "name": "sample_152_spaghetti",
+      "algorithm": "Algorithm 152",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_152.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 305,
+      "name": "sample_153",
+      "algorithm": "Algorithm 153",
+      "category": "generated",
+      "file": "dataset/normal/sample_153.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 306,
+      "name": "sample_153_spaghetti",
+      "algorithm": "Algorithm 153",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_153.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 307,
+      "name": "sample_154",
+      "algorithm": "Algorithm 154",
+      "category": "generated",
+      "file": "dataset/normal/sample_154.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 308,
+      "name": "sample_154_spaghetti",
+      "algorithm": "Algorithm 154",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_154.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 309,
+      "name": "sample_155",
+      "algorithm": "Algorithm 155",
+      "category": "generated",
+      "file": "dataset/normal/sample_155.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 310,
+      "name": "sample_155_spaghetti",
+      "algorithm": "Algorithm 155",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_155.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 311,
+      "name": "sample_156",
+      "algorithm": "Algorithm 156",
+      "category": "generated",
+      "file": "dataset/normal/sample_156.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 312,
+      "name": "sample_156_spaghetti",
+      "algorithm": "Algorithm 156",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_156.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 313,
+      "name": "sample_157",
+      "algorithm": "Algorithm 157",
+      "category": "generated",
+      "file": "dataset/normal/sample_157.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 314,
+      "name": "sample_157_spaghetti",
+      "algorithm": "Algorithm 157",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_157.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 315,
+      "name": "sample_158",
+      "algorithm": "Algorithm 158",
+      "category": "generated",
+      "file": "dataset/normal/sample_158.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 316,
+      "name": "sample_158_spaghetti",
+      "algorithm": "Algorithm 158",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_158.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 317,
+      "name": "sample_159",
+      "algorithm": "Algorithm 159",
+      "category": "generated",
+      "file": "dataset/normal/sample_159.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 318,
+      "name": "sample_159_spaghetti",
+      "algorithm": "Algorithm 159",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_159.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    },
+    {
+      "id": 319,
+      "name": "sample_160",
+      "algorithm": "Algorithm 160",
+      "category": "generated",
+      "file": "dataset/normal/sample_160.cpp",
+      "is_spaghetti": false
+    },
+    {
+      "id": 320,
+      "name": "sample_160_spaghetti",
+      "algorithm": "Algorithm 160",
+      "category": "generated",
+      "file": "dataset/spaghetti/sample_160.cpp",
+      "is_spaghetti": true,
+      "severity_level": 2,
+      "metrics": [
+        "varied_warnings"
+      ]
+    }
+  ]
+}
